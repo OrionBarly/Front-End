@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+audio {
+  max-height: 40%;
+  max-width: 10%;
+}
+
+video {
+  position: fixed;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: -1;
+
+  -webkit-filter: opacity(80%);
+}
+
+body {
+  background-color: #000066;
+  color: #00ff66;
+  font-family: "Hanalei Fill", cursive;
+}
+
+header {
+  font-family: "Rubik 80s Fade", cursive;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 20px;
+}
+
+.redes {
+  color: beige;
+  padding: 20px;
+  display: flex-end;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Press Start 2P", cursive;
+  justify-content: left;
+}
+
+.logo img {
+  height: 100px;
+}
+
+section {
+  font-size: 40px;
+}
+
+h2 {
+  font-family: "VT323", monospace;
+  color: aqua;
+  size: 100%;
+}
+
+#yo {
+}
+
+#experiencia {
+}
+
+#formacion {
+}
