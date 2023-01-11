@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  font-family: "Rubik 80s Fade", cursive;
+  text-shadow: 0 0 10px 5px #03cc00;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  cursor: url(Img/flechaGlitch.png), auto;
+}
+
+a {
+  cursor: url(img/mano.png), auto;
+}
+
+video {
+  position: fixed;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: -1;
+}
+
+.arriba {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: +1;
+  width: 95%;
+  margin: 0 40px;
+  top: 40px;
+}
+.button {
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  cursor: pointer;
+  width: 95%;
+  margin-bottom: 30px;
+  position: fixed;
+}
+
+.button .btn-1 {
+  margin-right: 50%;
+}
+
+.btn-1:hover {
+  background-color: #03cc00;
+  padding: 5px 5px;
+  border-radius: 20px;
+  transition: 0.45s;
+  box-shadow: 0 0 10px 5px #03cc00;
+
+  cursor: url(img/mano.png), auto;
+}
+
+.btn-2:hover {
+  background-color: #cc00c2;
+  padding: 5px 5px;
+  border-radius: 20px;
+  transition: 0.45s;
+  box-shadow: 0 0 10px 5px #cc00c2;
+
+  cursor: url(img/mano.png), auto;
+}
+
+.btn-1.on {
+  background-color: #03cc00;
+  border-radius: 20px;
+  transition: 0.45s;
+  box-shadow: 0 0 10px 5px #03cc00;
+}
+
+.btn-2.on {
+  background-color: #cc00c2;
+  border-radius: 20px;
+  transition: 0.45s;
+  box-shadow: 0 0 10px 5px #cc00c2;
+}
+header {
+  min-height: 70px;
+  max-height: 300px;
+  align-items: center;
+  display: flex;
+  color: aquamarine;
+  margin: 30px auto 0;
+  background-color: black;
+  position: relative;
+  justify-content: space-between;
+  font-family: "Rubik 80s Fade", cursive;
+  font-size: 40px;
+}
+
+header::before,
+header::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #99ffcc,
+    #99cccc,
+    #9999cc,
+    #9966cc,
+    #9933cc,
+    #9900cc,
+    #9933cc,
+    #9966cc,
+    #9999cc,
+    #99cccc
+  );
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.redes {
+  color: beige;
+  padding: 20px;
+  display: flex-end;
+  align-items: center;
+  flex-flow: row nowrap;
+  position: relative;
+  left: 400px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 160px;
+}
+
+.redes a {
+  align-items: center;
+  text-decoration: none;
+  transition: 0.45s ease;
+  float: right;
+  color: white;
+  size: 20rem;
+  display: flex;
+  margin: 1.5rem;
+  border-radius: 0.6rem;
+  position: relative;
+  overflow: none;
+  justify-content: space-between;
+  right: 100px;
+  z-index: +1;
+}
+
+.redes a:hover {
+  background: rgba(0, 128, 75, 0.386);
+  padding: 1rem;
+  align-items: center;
+  box-shadow: inset 0 0 10px 5px #026835, 0 0 10px 5px #026835;
+  text-shadow: 0 0 10px 5px #038d48;
+
+  cursor: url(img/mano.png), auto;
+}
+
+.ingreso {
+  color: aliceblue;
+
+  align-items: center;
+  size: 20rem;
+  border-radius: 0.6rem;
+  position: relative;
+  right: 50px;
+  bottom: 1.8px;
+  cursor: url(img/mano.png), auto;
+}
+
+.ingreso:hover {
+  color: #9900cc;
+}
+
+@media (max-width: 850px) {
+  header {
+    flex-direction: column;
+  }
+  .redes {
+    flex-direction: row;
+  }
+  .logo img {
+    height: 100px;
+  }
+  .logo {
+    justify-content: space-between;
+  }
+}
+
+section {
+  background: rgba(0, 2, 1, 0.879);
+  align-items: center;
+  border-radius: 1em;
+  color: #99ffcc;
+  margin: 3em 1.5em;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: inset 0 0 0.7em rgb(2, 190, 14), 0 0 0.7em rgb(2, 190, 14);
+  border: #99ffcc;
+  letter-spacing: 0.1em;
+}
+
+section p {
+  font-family: "Teko", sans-serif;
+  font-size: 23px;
+  letter-spacing: 0.1em;
+}
+
+#yo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Orion {
+  --shimmy-distance: 5;
+  --clip-one: polygon(
+    0 2%,
+    100% 2%,
+    100% 95%,
+    95% 95%,
+    95% 90%,
+    85% 90%,
+    85% 95%,
+    0 70%
+  );
+  --clip-two: polygon(
+    0 78%,
+    100% 78%,
+    100% 100%,
+    95% 100%,
+    95% 90%,
+    85% 90%,
+    85% 100%,
+    8% 100%,
+    0 78%
+  );
+  --clip-three: polygon(
+    0 44%,
+    100% 44%,
+    100% 54%,
+    95% 54%,
+    95% 54%,
+    85% 54%,
+    85% 54%,
+    0 54%
+  );
+  --clip-four: polygon(
+    0 0,
+    100% 0,
+    100% 0,
+    95% 0,
+    95% 0,
+    85% 0,
+    85% 0,
+    8% 0,
+    0 0
+  );
+  --clip-five: polygon(
+    0 0,
+    100% 0,
+    100% 0,
+    95% 0,
+    95% 0,
+    85% 0,
+    85% 0,
+    8% 0,
+    0 0
+  );
+  --clip-six: polygon(
+    0 40%,
+    100% 40%,
+    100% 85%,
+    95% 85%,
+    95% 85%,
+    85% 85%,
+    85% 85%,
+    8% 85%,
+    0 70%
+  );
+  --clip-seven: polygon(
+    0 63%,
+    100% 63%,
+    100% 80%,
+    95% 80%,
+    95% 80%,
+    85% 80%,
+    85% 80%,
+    8% 80%,
+    0 70%
+  );
+  background: url(Img/yoReal.jpg);
+  background-size: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 300px;
+  position: relative;
+  box-shadow: inset 0 0 50px 2px #000000, 0 0 50px 2px #03cc00;
+  border: 2px groove #05ff058c;
+}
+
+.Orion::before {
+  content: "";
+  position: absolute;
+  background: url(Img/yoReal.jpg);
+  background-size: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 240px;
+  max-block-size: 240px;
+  border: 2px groove #05ff058c;
+
+  mix-blend-mode: soft-light;
+  animation: glitch 1.5s alternate-reverse infinite;
+}
+
+@keyframes glitch {
+  0% {
+    background-position: 5px 0;
+    filter: hue-rotate(0deg);
+    clip-path: var(--clip-one);
+  }
+  2%,
+  8% {
+    clip-path: var(--clip-two);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+  6% {
+    clip-path: var(--clip-two);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  9% {
+    clip-path: var(--clip-two);
+    transform: translate(0, 0);
+  }
+  10% {
+    background-position: 5px 0;
+    clip-path: var(--clip-three);
+    transform: translate(0, 0);
+  }
+  14%,
+  19% {
+    clip-path: var(--clip-four);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  20% {
+    background-position: -5px 0;
+  }
+  25% {
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  30% {
+    background-position: 15px 0;
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+  35%,
+  45% {
+    clip-path: var(--clip-six);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+  40% {
+    background-position: 5px 0;
+    clip-path: var(--clip-six);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  50% {
+    background-position: -25px 0;
+    clip-path: var(--clip-six);
+    transform: translate(0, 0);
+  }
+  55% {
+    clip-path: var(--clip-seven);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  60% {
+    background-position: -50px 0;
+    clip-path: var(--clip-seven);
+    transform: translate(0, 0);
+  }
+  70% {
+    background-position: 0 -20%;
+  }
+  80% {
+    background-position: -70px 30px;
+  }
+  81% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 0;
+    filter: hue-rotate(360deg);
+  }
+  31%,
+  61%,
+  100% {
+    clip-path: var(--clip-four);
+  }
+}
+
+.descripcion {
+  margin: 0 0 0 2em;
+}
+
+footer {
+  background: #00000092;
+  padding: 1em;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+
+footer a {
+  font-family: "Bebas Neue", cursive;
+}
+
+.inicio a {
+  text-decoration: none;
+  color: aquamarine;
+  padding: 0.5em;
+  align-items: center;
+}
+
+.correo a {
+  text-decoration: none;
+  color: #9999cc;
+  padding: 1em;
+}
+
+footer a:hover {
+  letter-spacing: 0.5em;
+  transition: 0.45s ease;
+  text-shadow: 0 0 30px 30px #c396fa;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#habilidades {
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+  margin: 50px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px 2px rgb(3, 30, 1), 0 0 50px 2px rgb(4, 30, 1);
+  --bgColor: rgb(54, 209, 40);
+  font-family: "Dosis", sans-serif;
+}
+
+.box .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -40%);
+  text-align: center;
+  color: rgb(20, 193, 58);
+}
+
+.box .text h2 {
+  font-size: 30px;
+  font-weight: 40px;
+  letter-spacing: 0.1em;
+  font-family: "Dosis", sans-serif;
+}
+
+.box .text small {
+  font-size: 20px;
+  display: block;
+  transform: translate(-5%, -50%);
+  font-family: "Dosis", sans-serif;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.circle .points {
+  width: 1px;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  border-radius: 3px;
+  transform: rotate(calc(var(--i) * var(--rot))) translateY(-79px);
+}
+
+.points.marked {
+  animation: glow 0.04s linear forwards;
+  animation-delay: calc(var(--i) * 0.05s);
+}
+
+@keyframes glow {
+  0% {
+    background: black;
+    box-shadow: none;
+  }
+  100% {
+    background: var(--bgColor);
+    box-shadow: inset 0 0 15px 2px var(--bgColor), 0 0 30px 2px var(--bgColor);
+  }
+}

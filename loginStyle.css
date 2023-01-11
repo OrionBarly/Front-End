@@ -1,0 +1,130 @@
+body {
+  background: black;
+  align-items: center;
+  min-height: 100vh;
+  display: flexbox;
+
+  cursor: url(../../assets/Img/flechaGlitch.png), auto;
+}
+
+section {
+  height: 380px;
+  width: 380px;
+  border-radius: 8px;
+  background-color: black;
+  position: relative;
+  padding: 50px 40px;
+  display: flex;
+  left: 25%;
+  margin-bottom: 50%;
+  flex-direction: column;
+  margin: 100px;
+}
+
+section::before,
+section::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 400px;
+  height: 40px;
+  background: linear-gradient(
+    50deg,
+    #ff9999,
+    #ccbf99,
+    #9999cc,
+    #9966cc,
+    #019f11,
+    #9900cc,
+    #003761,
+    #9966cc,
+    #9999cc,
+    #99cccc
+  );
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+  filter: blur(7px);
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+section::after {
+  filter: blur(20px);
+}
+
+section h1 {
+  font-weight: 100;
+  text-align: left;
+  letter-spacing: 0.1em;
+  color: #99cccc;
+}
+
+input {
+  color: #019f11;
+  width: 90%;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+
+span {
+  color: #019f11;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  margin: 15px;
+}
+
+.user {
+  border: #b133fa4c;
+  background: none;
+  background-color: --bs-info-bg-subtle;
+  background-color: #b133fa4c;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
+a {
+  text-align: right;
+  cursor: url(img/mano.png), auto;
+  color: #9966cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0.3em 0.3em 0.3em #0c89e9;
+  color: #0c89e9;
+}
+
+.enter {
+  background: #016b0c4c;
+  color: #01a818;
+  height: 3em;
+  width: 7em;
+  border: none;
+  border-radius: 10px;
+  text-shadow: 0 0 0.5em #00a413;
+  box-shadow: inset 0 0 0.3em #01a818, 0 0 0.3em #01a818;
+  cursor: url(img/mano.png), auto;
+}
+
+.enter:hover {
+  text-shadow: 0 0 1em #00a413;
+  box-shadow: inset 0 0 2em #01a818, 0 0 2em #01a818;
+}
+.user:hover {
+  text-shadow: 0 0 0.3em #00a413;
+  box-shadow: inset 0 0 0.3em #a407c3, 0 0 0.6em #d609ff;
+}
